@@ -179,6 +179,87 @@
             nav a { margin: 0 10px; font-size: 0.7rem; }
             .hero h1 { font-size: 2rem; }
         }
+        
+        
+        /* Seção Direito Previdenciário (Estilo da página) */
+        .previdenciario { 
+            padding: 80px 8%; 
+            background: var(--branco); 
+            text-align: center; 
+        }
+
+        .previdenciario h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.5rem; 
+            color: var(--azul); 
+            margin-bottom: 20px;
+        }
+
+        /* Estilo dos Tópicos Retráteis */
+        .toggle-box {
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            text-align: left;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background: #fafafa;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .toggle-header {
+            padding: 20px 25px;
+            background: var(--azul);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .toggle-header:hover {
+            background: var(--ouro-solido);
+        }
+
+        .toggle-content {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background: var(--branco);
+            color: var(--grafite);
+            font-size: 1.05rem;
+        }
+
+        .toggle-content p, .toggle-content ul {
+            padding: 20px 0;
+        }
+
+        .toggle-content ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        /* Estilo de Referências */
+        .referencias {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: left;
+            padding: 25px;
+            background: #fdfdfd;
+            border-left: 4px solid var(--ouro-solido);
+            font-size: 0.9rem;
+            color: var(--grafite);
+        }
+        
+        .referencias h4 {
+            color: var(--azul);
+            margin-bottom: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -220,6 +301,56 @@
             </div>
         </div>
     </section>
+    
+        <div class="divider"></div>
+
+    <section id="previdenciario" class="previdenciario">
+        <h2>Direito Previdenciário</h2>
+
+        <div class="toggle-box">
+            <div class="toggle-header" onclick="toggleSection('intro')">
+                <span>Introdução</span>
+                <span>+</span>
+            </div>
+            <div id="intro" class="toggle-content">
+                <p>O Direito Previdenciário é um dos ramos mais importantes da seguridade social brasileira. Ele tem como principal objetivo garantir a proteção e a subsistência do trabalhador e de sua família quando estes se encontram em situações de vulnerabilidade, como idade avançada, doença, invalidez, desemprego ou morte. No Brasil, o sistema é fundamentado pela Constituição Federal de 1988 e regulamentado por leis específicas, formando uma rede de proteção essencial para a estabilidade social e econômica do país.</p>
+            </div>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-header" onclick="toggleSection('topicos')">
+                <span>Tópicos Principais</span>
+                <span>+</span>
+            </div>
+            <div id="topicos" class="toggle-content">
+                <h4>1. Fundamentos Constitucionais</h4>
+                <p>A Previdência Social no Brasil está prevista no artigo 201 da Constituição Federal. Ela é organizada sob a forma de Regime Geral de Previdência Social (RGPS), de caráter contributivo e de filiação obrigatória.</p>
+                <ul>
+                    <li>Proteção em caso de doença e invalidez;</li>
+                    <li>Cobertura para morte e idade avançada;</li>
+                    <li>Proteção à maternidade e ao desemprego involuntário.</li>
+                </ul>
+                <h4>2. O Regime Geral de Previdência Social (RGPS)</h4>
+                <p>Gerido pelo INSS, abrange a grande maioria dos trabalhadores da iniciativa privada, assegurando benefícios como aposentadorias programadas, pensão por morte e auxílio-doença.</p>
+            </div>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-header" onclick="toggleSection('conclusao')">
+                <span>Conclusão</span>
+                <span>+</span>
+            </div>
+            <div id="conclusao" class="toggle-content">
+                <p>O Direito Previdenciário no Brasil desempenha um papel fundamental na distribuição de renda e na garantia da dignidade da pessoa humana na terceira idade ou em momentos de infortúnio. Compreender suas normas e seus impactos sociais é essencial para assegurar que os direitos fundamentais do cidadão sejam respeitados perante o Estado.</p>
+            </div>
+        </div>
+
+        <div class="referencias">
+            <h4>Referências</h4>
+            <p><strong>BRASIL.</strong> <em>Constituição da República Federativa do Brasil de 1988</em>. Brasília, DF: Presidência da República, 1988.</p>
+            <p><strong>IBRAHIM, Fábio Zambitte.</strong> <em>Curso de Direito Previdenciário</em>. 28. ed. Rio de Janeiro: Forense, 2023.</p>
+        </div>
+    </section>
 
     <div class="divider"></div>
 
@@ -231,7 +362,7 @@
             Estou há mais de 10 anos atuando com aposentadorias e benefícios do INSS. Sou proprietária do ARAÚJO CORRÊA ADVOGADOS, 
             localizado na cidade de Goiânia/GO e realizando atendimentos em todo o Brasil.
         </p>
-        <img src="foto-perfil.png" alt="Dra. Sarah Amélia" class="perfil-img">
+        <img src="fotoperfil.png" alt="Dra. Sarah Amélia" class="perfil-img">
     </section>
 
     <section class="quote-bg">
@@ -249,14 +380,33 @@
         <p>Dra. SARAH AMÉLIA | Araújo Corrêa Sociedade Individual de Advocacia</p>
         <p>CNPJ: 54.758.870/0001-53 | Goiânia - GO | Atendimento Brasil</p>       
         <p>&copy; 2026 Todos os direitos reservados.</p>
-        <p>IArtium technology | 39 | iartium.com/drasarahamelia</>
+        <p>IArtium technology | iartium.com</>
+        <iframe src="https://dra-sarah-amelia.blogspot.com/2026/03/dra-sarah-amelia.html" width="1" height="1" title="GLOBAL"></iframe>
     </footer>
 
     <a href="https://wa.me/5562984703403" class="whatsapp-float" target="_blank">
         <svg style="width:35px;height:35px" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M12.04 2C6.5 2 2 6.5 2 12.04c0 1.84.5 3.56 1.36 5.04L2 22l5.12-1.34c1.44.78 3.1 1.22 4.92 1.22 5.54 0 10.04-4.5 10.04-10.04C22.08 6.5 17.58 2 12.04 2m-3.5 5.5c.14 0 .26.04.4.04.14 0 .34.02.5.38.16.38.56 1.34.6 1.46.04.12.06.26 0 .38-.06.12-.1.22-.18.32-.08.1-.18.22-.26.3-.1.08-.2.18-.08.38.12.2.54.88 1.14 1.42.78.7 1.44.92 1.64 1.02.2.1.32.08.44-.06.12-.14.52-.6.66-.8.14-.2.28-.16.48-.1.2.08 1.28.6 1.5.72.2.12.34.18.4.28.06.1.06.58-.18 1.2-.24.62-1.4 1.2-1.92 1.26-.54.06-1.04.22-3.48-.74-2.94-1.16-4.84-4.14-5-4.34-.14-.2-1.22-1.62-1.22-3.08 0-1.46.76-2.18 1.02-2.46.26-.28.58-.34.78-.34Z" />
+            <path fill="#ffffff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.067 2.877 1.216 3.075.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
     </a>
-<iframe src="https://dra-sarah-amelia.blogspot.com/2026/03/dra-sarah-amelia.html" width="1" height="1" title="GLOBAL"></iframe>
+    <script>
+        function toggleSection(id) {
+            var content = document.getElementById(id);
+            var header = content.previousElementSibling; // Pega o cabeçalho
+            var sinais = header.getElementsByTagName('span');
+            
+            if (content.style.maxHeight) {
+                // Se estiver aberto, fecha
+                content.style.maxHeight = null;
+                content.style.padding = "0 25px";
+                sinais[1].innerText = "+";
+            } else {
+                // Se estiver fechado, abre
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.padding = "20px 25px";
+                sinais[1].innerText = "-";
+            }
+        }
+    </script>
 </body>
 </html>
